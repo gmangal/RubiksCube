@@ -5,10 +5,6 @@ Rubik's Cube Java applet
 
 author: Gaurav Mangal
 
-Need:
-    Method to scramble the cube
-    Change project to start with a solved cube rather than reading input
-
 Colors:
     The following are the numbers within the 3D array in the program that
     correspond to colors on the Rubik's cube. This information is in the 
@@ -20,3 +16,18 @@ Colors:
     4 - Orange
     5 - Green
     6 - Blue
+
+TODO:
+    Create method to scramble the cube
+    Remove all I/O features
+        Remove readCube and writeCube methods
+    Remove commands ArrayList
+    Extract main from RubiksCube.java into its own class. RubiksCube.java should
+        represent our model and nothing else.
+    Modify RubiksCube.java so that its constructor constructs a solved cube.
+    Create a class to hold all the GUI components.
+    **Optional** Improve efficiency by manually writing each rotation method 
+        instead of calling other rotation methods
+
+
+
