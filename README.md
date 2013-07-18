@@ -18,6 +18,7 @@ Colors:
     6 - Blue
 
 TODO:
+    Check if Ankush can make use GitHub Properly
     Create method to scramble the cube
     Remove all I/O features
         Remove readCube and writeCube methods
