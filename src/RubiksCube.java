@@ -848,7 +848,7 @@ public class RubiksCube
     int calledStatement;
     for (int i = 0; i < 100; i++)
     {
-      calledStatement = (int) Math.random() * 13;
+      calledStatement = (int) Math.random() * 17;
       switch (calledStatement)
       {
         case 1:
@@ -886,6 +886,18 @@ public class RubiksCube
           break;
         case 12:
           rotateRightReverse();
+          break;
+        case 13:
+          rotateCubeUp();
+          break;
+        case 14:
+          rotateCubeDown();
+          break;
+        case 15:
+          rotateCubeLeft();
+          break;
+        case 16:
+          rotateCubeRight();
           break;
         default:
           System.out.println("Random number out of range");
