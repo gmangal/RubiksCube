@@ -3,7 +3,7 @@ RubiksCube
 
 Rubik's Cube Java applet
 
-author: Gaurav Mangal
+author: Gaurav Mangal, Ankush Agrawal
 
 Colors:
     The following are the numbers within the 3D array in the program that
@@ -23,6 +23,8 @@ TODO:
     Remove commands ArrayList
     Remove main from RubiksCube.java. RubiksCube.java should represent our model
         and nothing else.
+    Turn project into an applet
+    Create a method that checks if the cube is solved
     Modify RubiksCube.java so that its constructor constructs a solved cube.
     Create a class to hold all the GUI components.
     **Optional** Improve efficiency by manually writing each rotation method 
