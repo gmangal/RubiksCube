@@ -906,4 +906,18 @@ public class RubiksCube
     
   }
   
+  public boolean isCubeComplete()
+  {
+    for (int a = 0; a < 6; a++)
+    {
+      for (int b = 0; b < 3; b++)
+      {
+        for (int c = 0; c < 3; c++)
+        {
+          if (cube[a][b][c] != cube[a][1][1]) return false;
+        }
+      }
+    }
+    return true;
+  }
 } // class RubiksCube
