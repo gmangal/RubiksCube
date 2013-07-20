@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class RubiksCube {
 
 	public static void main(String[] args) {
@@ -10,8 +8,6 @@ public class RubiksCube {
 
 	// structure of cube
 	int[][][] cube = new int[6][3][3];
-	// list to hold commands from input file
-	ArrayList<String> commands = new ArrayList<String>();
 
 	public RubiksCube() {
 		/*

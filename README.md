@@ -29,13 +29,9 @@ Faces:
     5 - Right
 
 TODO:
-    Remove all I/O features
-        Remove readCube and writeCube methods
-    Remove commands ArrayList
     Remove main from RubiksCube.java. RubiksCube.java should represent our model
         and nothing else.
     Turn project into an applet
-    Modify RubiksCube.java so that its constructor constructs a solved cube.
     Create a class to hold all the GUI components.
     **Optional** Improve efficiency by manually writing each rotation method 
         instead of calling other rotation methods
