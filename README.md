@@ -17,6 +17,17 @@ Colors:
     5 - Green
     6 - Blue
 
+Faces:
+    The first dimension of the array that holds the cube refers to the different
+    faces of the cube. The indices map as follows:
+
+    0 - Up
+    1 - Down
+    2 - Front
+    3 - Back
+    4 - Left
+    5 - Right
+
 TODO:
     Remove all I/O features
         Remove readCube and writeCube methods
