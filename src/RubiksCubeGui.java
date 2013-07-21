@@ -1,7 +1,7 @@
 import java.awt.Color;
-import java.awt.Graphics;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -9,12 +9,11 @@ import javax.swing.JApplet;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import net.miginfocom.swing.MigLayout;
-
 public class RubiksCubeGui extends JApplet {
 
 	private RubiksCube rc;
 	private JPanel[][][] panels = new JPanel[6][3][3];
+	private HashMap<Integer, Color> colorMap;
 
 	private ImageIcon imgArrowDown = null;
 	private ImageIcon imgArrowUp = null;
@@ -107,6 +106,7 @@ public class RubiksCubeGui extends JApplet {
 
 		initializeArrowImages();
 		initializePanels();
+		createColorMap();
 		createPanelArray();
 
 	}
@@ -402,6 +402,16 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().add(panel_71, "cell 8 17,grow");
 	}
 
+	private void createColorMap() {
+		colorMap = new HashMap<Integer, Color>();
+		colorMap.put(1, Color.WHITE);
+		colorMap.put(2, Color.YELLOW);
+		colorMap.put(3, Color.RED);
+		colorMap.put(4, Color.ORANGE);
+		colorMap.put(5, Color.GREEN);
+		colorMap.put(6, Color.BLUE);
+	}
+	
 	private void createPanelArray() {
 
 	}
