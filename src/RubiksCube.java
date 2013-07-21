@@ -1,11 +1,5 @@
 public class RubiksCube {
 
-	public static void main(String[] args) {
-
-		RubiksCube rc = new RubiksCube();
-
-	} // main
-
 	// structure of cube
 	int[][][] cube = new int[6][3][3];
 
