@@ -29,12 +29,10 @@ Faces:
     5 - Right
 
 TODO:
-    Remove main from RubiksCube.java. RubiksCube.java should represent our model
-        and nothing else.
-    Turn project into an applet
-    Create a class to hold all the GUI components.
+    Implement createPanelArray method by manually mapping panels to indices in
+        the 3D array.
+    Create an undo button using a Stack
+    Create clickListeners for all the buttons
     **Optional** Improve efficiency by manually writing each rotation method 
         instead of calling other rotation methods
-
-
 
