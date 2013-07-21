@@ -401,9 +401,9 @@ public class RubiksCubeGui extends JApplet {
 		panel_71 = new JLabel(imgArrowUp);
 		getContentPane().add(panel_71, "cell 8 17,grow");
 	}
-	
+
 	private void createPanelArray() {
-		
+
 	}
 
 	public void init() {
@@ -412,13 +412,4 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 	}
 
-	public void paintComponent(Graphics g) {
-		super.paintComponents(g);
-		try {
-			g.drawImage(ImageIO.read(new File("images/arrowDown.png")), 0, 0,
-					null);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 }
