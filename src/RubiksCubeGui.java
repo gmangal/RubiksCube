@@ -12,58 +12,55 @@ import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 
 public class RubiksCubeGui extends JApplet {
-	/**
-	 * Create the applet.
-	 */
+
+	private RubiksCube rc;
+	
+	private ImageIcon imgArrowDown = null;
+	private ImageIcon imgArrowUp = null;
+	private ImageIcon imgArrowRight = null;
+	private ImageIcon imgArrowLeft = null;
+	
+	private JLabel panel_55;
+	private JLabel panel_72;
+
 	public RubiksCubeGui() {
+		rc = new RubiksCube();
+
 		getContentPane()
 				.setLayout(
 						new MigLayout(
 								"",
 								"[40][40][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40,grow][40][40][40]",
 								"[40][][-17.00][][40,grow][40][40][40,grow][40,grow][40,grow][40,grow][40][40][40][40][40][40][40]"));
-		ImageIcon imgArrowDown = null;
-		ImageIcon imgArrowUp = null;
-		ImageIcon imgArrowRight = null;
-		ImageIcon imgArrowLeft = null;
+
+		initializeArrowImages();
+		initializePanels();
+
+	}
+
+	private void initializeArrowImages() {
 		try {
 			imgArrowUp =
 					new ImageIcon(
 							ImageIO.read(new File("../images/arrowUp.png")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
 			imgArrowDown =
 					new ImageIcon(ImageIO.read(new File(
 							"../images/arrowDown.png")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
 			imgArrowLeft =
 					new ImageIcon(ImageIO.read(new File(
 							"../images/arrowLeft.png")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
 			imgArrowRight =
 					new ImageIcon(ImageIO.read(new File(
 							"../images/arrowRight.png")));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
 
-		JLabel panel_55 = new JLabel();
+	private void initializePanels() {
 		panel_55 = new JLabel(imgArrowDown);
 		getContentPane().add(panel_55, "cell 6 4,grow");
 
-		JLabel panel_72 = new JLabel();
 		panel_72 = new JLabel(imgArrowDown);
 		getContentPane().add(panel_72, "cell 7 4,grow");
 
@@ -346,7 +343,6 @@ public class RubiksCubeGui extends JApplet {
 		JLabel panel_71 = new JLabel();
 		panel_71 = new JLabel(imgArrowUp);
 		getContentPane().add(panel_71, "cell 8 17,grow");
-
 	}
 
 	public void init() {
