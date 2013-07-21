@@ -14,6 +14,7 @@ import net.miginfocom.swing.MigLayout;
 public class RubiksCubeGui extends JApplet {
 
 	private RubiksCube rc;
+	private JPanel[][][] panels = new JPanel[6][3][3];
 
 	private ImageIcon imgArrowDown = null;
 	private ImageIcon imgArrowUp = null;
@@ -106,6 +107,7 @@ public class RubiksCubeGui extends JApplet {
 
 		initializeArrowImages();
 		initializePanels();
+		createPanelArray();
 
 	}
 
@@ -196,15 +198,15 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().add(panel_54, "cell 2 8,grow");
 
 		panel_24 = new JPanel();
-		panel_24.setBackground(new Color(0, 100, 0));
+		panel_24.setBackground(Color.GREEN);
 		getContentPane().add(panel_24, "cell 3 8,grow");
 
 		panel_25 = new JPanel();
-		panel_25.setBackground(new Color(0, 100, 0));
+		panel_25.setBackground(Color.GREEN);
 		getContentPane().add(panel_25, "cell 4 8,grow");
 
 		panel_26 = new JPanel();
-		panel_26.setBackground(new Color(0, 100, 0));
+		panel_26.setBackground(Color.GREEN);
 		getContentPane().add(panel_26, "cell 5 8,grow");
 
 		panel_9 = new JPanel();
@@ -238,15 +240,15 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().add(panel_64, "cell 2 9,grow");
 
 		panel_27 = new JPanel();
-		panel_27.setBackground(new Color(0, 100, 0));
+		panel_27.setBackground(Color.GREEN);
 		getContentPane().add(panel_27, "cell 3 9,grow");
 
 		panel_28 = new JPanel();
-		panel_28.setBackground(new Color(0, 100, 0));
+		panel_28.setBackground(Color.GREEN);
 		getContentPane().add(panel_28, "cell 4 9,grow");
 
 		panel_29 = new JPanel();
-		panel_29.setBackground(new Color(0, 100, 0));
+		panel_29.setBackground(Color.GREEN);
 		getContentPane().add(panel_29, "cell 5 9,grow");
 
 		panel_12 = new JPanel();
@@ -280,15 +282,15 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().add(panel_65, "cell 2 10,grow");
 
 		panel_23 = new JPanel();
-		panel_23.setBackground(new Color(0, 100, 0));
+		panel_23.setBackground(Color.GREEN);
 		getContentPane().add(panel_23, "cell 3 10,grow");
 
 		panel_22 = new JPanel();
-		panel_22.setBackground(new Color(0, 100, 0));
+		panel_22.setBackground(Color.GREEN);
 		getContentPane().add(panel_22, "cell 4 10,grow");
 
 		panel_21 = new JPanel();
-		panel_21.setBackground(new Color(0, 100, 0));
+		panel_21.setBackground(Color.GREEN);
 		getContentPane().add(panel_21, "cell 5 10,grow");
 
 		panel_15 = new JPanel();
@@ -399,6 +401,10 @@ public class RubiksCubeGui extends JApplet {
 		panel_71 = new JLabel(imgArrowUp);
 		getContentPane().add(panel_71, "cell 8 17,grow");
 	}
+	
+	private void createPanelArray() {
+		
+	}
 
 	public void init() {
 		setSize(800, 720);
@@ -412,7 +418,6 @@ public class RubiksCubeGui extends JApplet {
 			g.drawImage(ImageIO.read(new File("images/arrowDown.png")), 0, 0,
 					null);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
