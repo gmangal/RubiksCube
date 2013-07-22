@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -132,6 +134,7 @@ public class RubiksCubeGui extends JApplet {
 
 	private void initializePanels() {
 		panel_55 = new JLabel(imgArrowDown);
+		panel_55.addMouseListener(new tempMouseListener());
 		getContentPane().add(panel_55, "cell 6 4,grow");
 
 		panel_72 = new JLabel(imgArrowDown);
@@ -411,8 +414,38 @@ public class RubiksCubeGui extends JApplet {
 		colorMap.put(5, Color.GREEN);
 		colorMap.put(6, Color.BLUE);
 	}
-	
+
 	private void createPanelArray() {
+
+	}
+
+	private class tempMouseListener implements MouseListener {
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO call appropriate rotation method
+
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// do nothing
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// do nothing
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// do nothing
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// do nothing
+		}
 
 	}
 
