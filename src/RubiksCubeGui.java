@@ -80,7 +80,6 @@ public class RubiksCubeGui extends JApplet {
 	private JPanel panel_53;
 	private JLabel panel_54;
 	private JLabel panel_55;
-	private JPanel panel_56;
 	private JLabel panel_57;
 	private JLabel panel_58;
 	private JLabel panel_59;
@@ -112,6 +111,8 @@ public class RubiksCubeGui extends JApplet {
 		initializePanels();
 		createColorMap();
 		createPanelArray();
+		
+		panels[0][0][0].setBackground(colorMap.get(rc.cube[0][0][0]));
 
 	}
 
@@ -146,7 +147,7 @@ public class RubiksCubeGui extends JApplet {
 		getContentPane().add(panel_57, "cell 8 4,grow");
 
 		panel = new JPanel();
-		panel.setBackground(Color.WHITE);
+		//panel.setBackground(Color.WHITE);
 		getContentPane().add(panel, "cell 6 5,grow");
 
 		panel_1 = new JPanel();
@@ -418,7 +419,71 @@ public class RubiksCubeGui extends JApplet {
 	}
 
 	private void createPanelArray() {
+		// Up
+		panels[0][0][0] = panel;
+		panels[0][0][1] = panel_1;
+		panels[0][0][2] = panel_6;
+		panels[0][1][0] = panel_2;
+		panels[0][1][1] = panel_3;
+		panels[0][1][2] = panel_7;
+		panels[0][2][0] = panel_4;
+		panels[0][2][1] = panel_5;
+		panels[0][2][2] = panel_8;
 
+		// Down
+		panels[1][0][0] = panel_18;
+		panels[1][0][1] = panel_19;
+		panels[1][0][2] = panel_20;
+		panels[1][1][0] = panel_39;
+		panels[1][1][1] = panel_40;
+		panels[1][1][2] = panel_41;
+		panels[1][2][0] = panel_42;
+		panels[1][2][1] = panel_43;
+		panels[1][2][2] = panel_44;
+
+		// Front
+		panels[2][0][0] = panel_9;
+		panels[2][0][1] = panel_10;
+		panels[2][0][2] = panel_11;
+		panels[2][1][0] = panel_12;
+		panels[2][1][1] = panel_13;
+		panels[2][1][2] = panel_14;
+		panels[2][2][0] = panel_15;
+		panels[2][2][1] = panel_16;
+		panels[2][2][2] = panel_17;
+
+		// Back
+		panels[3][0][0] = panel_53;
+		panels[3][0][1] = panel_52;
+		panels[3][0][2] = panel_51;
+		panels[3][1][0] = panel_50;
+		panels[3][1][1] = panel_49;
+		panels[3][1][2] = panel_48;
+		panels[3][2][0] = panel_47;
+		panels[3][2][1] = panel_46;
+		panels[3][2][2] = panel_45;
+
+		// Left
+		panels[4][0][0] = panel_26;
+		panels[4][0][1] = panel_29;
+		panels[4][0][2] = panel_21;
+		panels[4][1][0] = panel_25;
+		panels[4][1][1] = panel_28;
+		panels[4][1][2] = panel_22;
+		panels[4][2][0] = panel_24;
+		panels[4][2][1] = panel_27;
+		panels[4][2][2] = panel_23;
+
+		// Right
+		panels[2][0][0] = panel_32;
+		panels[2][0][1] = panel_30;
+		panels[2][0][2] = panel_31;
+		panels[2][1][0] = panel_36;
+		panels[2][1][1] = panel_38;
+		panels[2][1][2] = panel_37;
+		panels[2][2][0] = panel_33;
+		panels[2][2][1] = panel_35;
+		panels[2][2][2] = panel_34;
 	}
 
 	private class tempMouseListener implements MouseListener {

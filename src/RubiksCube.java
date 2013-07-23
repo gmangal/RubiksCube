@@ -1,7 +1,7 @@
 public class RubiksCube {
 
 	// structure of cube
-	int[][][] cube = new int[6][3][3];
+	public int[][][] cube = new int[6][3][3];
 
 	public RubiksCube() {
 		/*
