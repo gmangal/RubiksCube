@@ -11,6 +11,8 @@ import javax.swing.JApplet;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import net.miginfocom.swing.MigLayout;
+
 public class RubiksCubeGui extends JApplet {
 
 	private RubiksCube rc;
@@ -351,13 +353,13 @@ public class RubiksCubeGui extends JApplet {
 		panel_42.setBackground(Color.YELLOW);
 		getContentPane().add(panel_42, "cell 6 13,grow");
 
-		panel_44 = new JPanel();
-		panel_44.setBackground(Color.YELLOW);
-		getContentPane().add(panel_44, "cell 7 13,grow");
-
 		panel_43 = new JPanel();
 		panel_43.setBackground(Color.YELLOW);
-		getContentPane().add(panel_43, "cell 8 13,grow");
+		getContentPane().add(panel_43, "cell 7 13,grow");
+
+		panel_44 = new JPanel();
+		panel_44.setBackground(Color.YELLOW);
+		getContentPane().add(panel_44, "cell 8 13,grow");
 
 		panel_45 = new JPanel();
 		panel_45.setBackground(Color.ORANGE);
