@@ -136,7 +136,6 @@ public class RubiksCubeGui extends JApplet {
 
 	private void initializePanels() {
 		panel_55 = new JLabel(imgArrowDown);
-		panel_55.addMouseListener(new tempMouseListener());
 		getContentPane().add(panel_55, "cell 6 4,grow");
 
 		panel_72 = new JLabel(imgArrowDown);
@@ -223,7 +222,7 @@ public class RubiksCubeGui extends JApplet {
 		panel_61 = new JLabel(imgArrowLeft);
 		getContentPane().add(panel_61, "cell 12 8,grow");
 
-		panel_64 = new JLabel(imgArrowDown);
+		panel_64 = new JLabel(imgArrowRight);
 		getContentPane().add(panel_64, "cell 2 9,grow");
 
 		panel_27 = new JPanel();
@@ -256,7 +255,7 @@ public class RubiksCubeGui extends JApplet {
 		panel_62 = new JLabel(imgArrowLeft);
 		getContentPane().add(panel_62, "cell 12 9,grow");
 
-		panel_65 = new JLabel(imgArrowDown);
+		panel_65 = new JLabel(imgArrowRight);
 		getContentPane().add(panel_65, "cell 2 10,grow");
 
 		panel_23 = new JPanel();
@@ -351,6 +350,26 @@ public class RubiksCubeGui extends JApplet {
 
 		panel_71 = new JLabel(imgArrowUp);
 		getContentPane().add(panel_71, "cell 8 17,grow");
+
+		panel_55.addMouseListener(new tempMouseListener());
+		panel_54.addMouseListener(new tempMouseListener());
+		panel_57.addMouseListener(new tempMouseListener());
+		panel_58.addMouseListener(new tempMouseListener());
+		panel_59.addMouseListener(new tempMouseListener());
+		panel_60.addMouseListener(new tempMouseListener());
+		panel_61.addMouseListener(new tempMouseListener());
+		panel_62.addMouseListener(new tempMouseListener());
+		panel_63.addMouseListener(new tempMouseListener());
+		panel_64.addMouseListener(new tempMouseListener());
+		panel_65.addMouseListener(new tempMouseListener());
+		panel_66.addMouseListener(new tempMouseListener());
+		panel_67.addMouseListener(new tempMouseListener());
+		panel_68.addMouseListener(new tempMouseListener());
+		panel_69.addMouseListener(new tempMouseListener());
+		panel_70.addMouseListener(new tempMouseListener());
+		panel_71.addMouseListener(new tempMouseListener());
+		panel_72.addMouseListener(new tempMouseListener());
+
 	}
 
 	private void createColorMap() {
@@ -420,15 +439,15 @@ public class RubiksCubeGui extends JApplet {
 		panels[4][2][2] = panel_23;
 
 		// Right
-		panels[2][0][0] = panel_32;
-		panels[2][0][1] = panel_30;
-		panels[2][0][2] = panel_31;
-		panels[2][1][0] = panel_36;
-		panels[2][1][1] = panel_38;
-		panels[2][1][2] = panel_37;
-		panels[2][2][0] = panel_33;
-		panels[2][2][1] = panel_35;
-		panels[2][2][2] = panel_34;
+		panels[5][0][0] = panel_32;
+		panels[5][0][1] = panel_30;
+		panels[5][0][2] = panel_31;
+		panels[5][1][0] = panel_36;
+		panels[5][1][1] = panel_38;
+		panels[5][1][2] = panel_37;
+		panels[5][2][0] = panel_33;
+		panels[5][2][1] = panel_35;
+		panels[5][2][2] = panel_34;
 	}
 
 	private void updatePanelColors() {
@@ -449,6 +468,91 @@ public class RubiksCubeGui extends JApplet {
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO call appropriate rotation method
+			if (e.getSource().equals(panel_71)) {
+				// clockwise right
+				rc.rotateRight();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_70)) {
+				// rc.rotateLeft();
+				// rc.rotateRightReverse();
+				rc.rotateRight();
+				rc.rotateLeftReverse();
+				rc.rotateRight();
+				rc.rotateLeftReverse();
+				rc.rotateRight();
+				rc.rotateLeftReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_69)) {
+				rc.rotateLeftReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_63)) {
+				rc.rotateBottomReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_62)) {
+				rc.rotateBottom();
+				rc.rotateTopReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_61)) {
+				rc.rotateTop();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_65)) {
+				rc.rotateBottom();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_64)) {
+				rc.rotateBottom();
+				rc.rotateTop();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_54)) {
+				rc.rotateTopReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_60)) {
+				rc.rotateBackReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_59)) {
+				rc.rotateBack();
+				rc.rotateFrontReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_58)) {
+				rc.rotateFront();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_68)) {
+				rc.rotateFrontReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_67)) {
+				rc.rotateFront();
+				rc.rotateBackReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_66)) {
+				rc.rotateBack();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_57)) {
+				rc.rotateRightReverse();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_72)) {
+				rc.rotateLeftReverse();
+				rc.rotateRight();
+				updatePanelColors();
+			}
+			if (e.getSource().equals(panel_55)) {
+				rc.rotateLeft();
+				updatePanelColors();
+			}
 
 		}
 
@@ -475,7 +579,7 @@ public class RubiksCubeGui extends JApplet {
 	}
 
 	public void init() {
-		setSize(800, 720);
+		setSize(800, 730);
 		setBackground(Color.blue);
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 	}
