@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 
+@SuppressWarnings("serial")
 public class RubiksCubeGui extends JApplet {
 
 	private RubiksCube rc;
@@ -467,7 +468,6 @@ public class RubiksCubeGui extends JApplet {
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			// TODO call appropriate rotation method
 			if (e.getSource().equals(panel_71)) {
 				// clockwise right
 				rc.rotateRight();
